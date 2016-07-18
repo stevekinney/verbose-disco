@@ -2,6 +2,7 @@ var $newIdeaForm = $('.new-idea-form');
 var $newIdeaTitle = $('.new-idea-title');
 var $newIdeaBody = $('.new-idea-body');
 var $ideaList = $('.ideas');
+var $clearIdeasButton = $('.clear-ideas');
 
 $newIdeaForm.on('submit', function (event) {
   event.preventDefault();
@@ -15,4 +16,8 @@ $newIdeaForm.on('submit', function (event) {
       <p>${body}</p>
     </article>
   `).appendTo($ideaList);
+});
+
+$clearIdeasButton.on('click', function () {
+  $ideaList.html('');
 });
